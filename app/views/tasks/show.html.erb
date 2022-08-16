@@ -1,0 +1,11 @@
+<div class="border-bottom mb-3 mx-3">
+  <div class="d-inline-flex space-between justify-content-between w-100 me-5">
+    <h1><%=@task.title%></h1>
+    <button class="btn border"><%= link_to "edit", edit_path%></button>
+  </div>
+  <div class="border p-4 m-3 rounded">
+  <%=@task.details%>
+  </div>
+  <p>Done: <%=@task.completed%></p>
+</div>
+<button class="btn border-primary ms-3"><%= link_to "Back to list", tasks_path%></button>

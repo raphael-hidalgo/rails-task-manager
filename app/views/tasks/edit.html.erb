@@ -1,0 +1,25 @@
+<h1 style="width: 80%; margin: 0 auto;">Edit Taks</h1>
+<div class='row mb-3 pb-3 border-bottom' style="width: 90%; margin: 0 auto;">
+  <%= form_for(@task) do |f| %>
+    <div class="col-12">
+      <%= f.label :title %>
+      <div class="col-12" style="width:100%;">
+      <%= f.text_field :title %>
+      </div>
+    </div>
+    <div class="col-12">
+      <%= f.label :details %>
+      <div class="col-12" style="width:100%;">
+        <%= f.text_field :details %>
+      </div>
+    </div>
+    <div class="col-12">
+      <%= f.label :completed %>
+      <%= f.check_box :completed %>
+    </div>
+    <div class="col-12 btn">
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>
+<button class="btn border-primary ms-5"><%= link_to "Back to list", tasks_path%></button>
